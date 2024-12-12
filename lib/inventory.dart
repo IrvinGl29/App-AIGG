@@ -21,7 +21,7 @@ class _InventoryPageState extends State<InventoryPage> {
   // Función para obtener la información del inventario desde la API
   Future<void> fetchInventory() async {
     final response = await http.get(
-      Uri.parse('http://192.168.100.53:8080/api/inventory'), // Cambia la URL según corresponda
+      Uri.parse('http://18.117.224.244/api/inventory'), // Cambia la URL según corresponda
     );
 
     if (response.statusCode == 200) {
@@ -53,7 +53,7 @@ class _InventoryPageState extends State<InventoryPage> {
               onPressed: () async {
                 Navigator.pop(context);
                 final response = await http.delete(
-                  Uri.parse('http://192.168.100.53:8080/api/inventory/$id'),
+                  Uri.parse('http://18.117.224.244/api/inventory/$id'),
                 );
 
                 if (response.statusCode == 200) {
@@ -125,7 +125,7 @@ class _InventoryPageState extends State<InventoryPage> {
                     quantity != null &&
                     price != null) {
                   final response = await http.post(
-                    Uri.parse('http://192.168.100.53:8080/api/inventory'),
+                    Uri.parse('http://18.117.224.244/api/inventory'),
                     headers: {'Content-Type': 'application/json'},
                     body: json.encode({
                       'name': name,
@@ -214,7 +214,7 @@ class _InventoryPageState extends State<InventoryPage> {
                     updatedQuantity != null &&
                     updatedPrice != null) {
                   final response = await http.put(
-                    Uri.parse('http://192.168.100.53:8080/api/inventory/$id'),
+                    Uri.parse('http://18.117.224.244/api/inventory/$id'),
                     headers: {'Content-Type': 'application/json'},
                     body: json.encode({
                       'name': updatedName,

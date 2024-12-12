@@ -8,7 +8,7 @@ class DashboardPage extends StatelessWidget {
   // Función para cerrar sesión
   Future<void> _logout(BuildContext context) async {
     final response = await http.post(
-      Uri.parse('http://192.168.100.53:8080/api/auth/logout'), // Cambia la URL por la de tu API de logout
+      Uri.parse('http://18.117.224.244/api/auth/logout'), // Cambia la URL por la de tu API de logout
       headers: {
         'Content-Type': 'application/json',
       },

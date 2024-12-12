@@ -21,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
     final password = _passwordController.text;
 
     final response = await http.post(
-      Uri.parse('http://192.168.100.53:8080/api/auth/login'), // Cambia la URL por la de tu API
+      Uri.parse('http://18.117.224.244/api/auth/login'), // Cambia la URL por la de tu API
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode({'username': username, 'password': password}),
     );
